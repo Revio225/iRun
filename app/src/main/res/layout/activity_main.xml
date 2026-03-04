@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:text="Share Your Growth Story!"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/bg"
+        android:layout_marginBottom="30px"
+        android:gravity="center"
+        android:background="@color/second"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginBottom="16px"
+            />
+
+        <EditText
+            android:id="@+id/tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="dd/mm/yyyy"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/edit_text"
+            android:inputType="date"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jarak"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginBottom="16px"
+            />
+
+        <EditText
+            android:id="@+id/jarak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jarak (m)"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/edit_text"
+            android:inputType="numberDecimal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waktu"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginBottom="16px"
+            />
+
+        <EditText
+            android:id="@+id/waktu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="00:00"
+            android:padding="12dp"
+            android:layout_marginBottom="32dp"
+            android:background="@android:drawable/edit_text"
+            android:inputType="time"
+            />
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginTop="520px"
+            android:backgroundTint="@color/second"
+            />
+
+    </LinearLayout>
+</LinearLayout>
