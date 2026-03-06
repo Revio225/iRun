@@ -96,4 +96,16 @@
         app:layout_constraintEnd_toEndOf="@id/edtNama"
         android:layout_marginTop="32dp"/>
 
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudah punya akun? Login"
+        android:textSize="14sp"
+        android:textColor="@color/second"
+        app:layout_constraintTop_toBottomOf="@id/btnSignup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
