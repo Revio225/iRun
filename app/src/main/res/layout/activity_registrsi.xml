@@ -91,10 +91,12 @@
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:backgroundTint="@color/primary"
-        app:layout_constraintTop_toBottomOf="@id/edtPass"
-        app:layout_constraintStart_toStartOf="@id/edtNama"
-        app:layout_constraintEnd_toEndOf="@id/edtNama"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="60dp"/>
 
     <TextView
         android:id="@+id/txtLogin"
