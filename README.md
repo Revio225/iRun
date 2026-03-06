@@ -1,5 +1,5 @@
 
-![Halaman Login](logo%20UPNVJT.png)
+![Halaman Login](Logo%20UPNVJT.png)
 
 # 🏃‍♂️ iRun - Aplikasi Pencatat Aktivitas Lari
 
