@@ -23,10 +23,10 @@ Aplikasi Android sederhana berbasis **Kotlin** untuk mencatat progres latihan la
 5.  **Profil :** Tampilan biodata pengguna.
 
 ## Jobdesc Clan Member :
-Naufal - Welcome & Beranda
-Zaqi - Catat Lari
-Dwiki - Registrasi
-Elvina - Profil
+- Naufal - Welcome & Beranda
+- Zaqi - Catat Lari
+- Dwiki - Registrasi
+- Elvina - Profil
 
 
 Made by Kelompok 6 - Paralel D
