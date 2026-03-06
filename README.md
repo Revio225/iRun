@@ -1,5 +1,7 @@
 
-<img src="Logo%20UPNVJT.png" width="200" alt="Logo UPNVJT">
+<p align="center">
+  <img src="Logo%20UPNVJT.png" width="150" alt="Logo UPNVJT">
+</p>
 
 # 🏃‍♂️ iRun - Aplikasi Pencatat Aktivitas Lari
 
