@@ -6,40 +6,37 @@
     android:layout_height="match_parent"
     android:background="@color/bg">
 
-    <!-- Title -->
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="I-Run"
-        android:textSize="26sp"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="@color/primary"
+        android:textColor="@color/second"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="60dp"/>
 
-    <!-- Subtitle -->
     <TextView
         android:id="@+id/txtSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Your Account"
         android:textSize="14sp"
-        android:textColor="@color/second"
+        android:textColor="@color/grey"
         app:layout_constraintTop_toBottomOf="@id/txtTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="6dp"/>
 
-    <!-- Nama -->
     <EditText
         android:id="@+id/edtNama"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:hint="Nama"
-        android:hintTextColor="@color/grey"
+        android:textColorHint="@color/grey"
         android:textColor="@color/primary"
         android:background="@android:drawable/edit_text"
         android:padding="10dp"
@@ -50,13 +47,12 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="40dp"/>
 
-    <!-- Email -->
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:hint="Email"
-        android:hintTextColor="@color/grey"
+        android:textColorHint="@color/grey"
         android:textColor="@color/primary"
         android:inputType="textEmailAddress"
         android:background="@android:drawable/edit_text"
@@ -66,13 +62,12 @@
         app:layout_constraintEnd_toEndOf="@id/edtNama"
         android:layout_marginTop="16dp"/>
 
-    <!-- Password -->
     <EditText
         android:id="@+id/edtPass"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:hint="Password"
-        android:hintTextColor="@color/grey"
+        android:textColorHint="@color/grey"
         android:textColor="@color/primary"
         android:inputType="textPassword"
         android:background="@android:drawable/edit_text"
@@ -82,7 +77,6 @@
         app:layout_constraintEnd_toEndOf="@id/edtNama"
         android:layout_marginTop="16dp"/>
 
-    <!-- Button -->
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="0dp"
@@ -90,7 +84,7 @@
         android:text="SIGN UP"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:backgroundTint="@color/primary"
+        android:backgroundTint="@color/second"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

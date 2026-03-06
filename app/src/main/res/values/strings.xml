@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">iRun</string>
+    <string name="dashboard_title">Your Progress</string>
+    <string name="desc_add_run">Add new run</string>
 </resources>
