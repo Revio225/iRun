@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/bg"
-    tools:context=".TambahLariActivity">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/judul"
