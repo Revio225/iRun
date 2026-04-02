@@ -5,26 +5,43 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class BerandaFragment : Fragment(R.layout.fragment_beranda) {
+
+    private lateinit var adapter: RunAdapter
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 1. Pasang "Telinga" untuk mendengarkan kiriman data dari TambahLariFragment
+        // 🔥 1. Setup RecyclerView
+        val rvHistory = view.findViewById<RecyclerView>(R.id.rvHistory)
+
+        adapter = RunAdapter(RunRepository.listRun)
+        rvHistory.layoutManager = LinearLayoutManager(requireContext())
+        rvHistory.adapter = adapter
+
+        // 🔥 2. Listener menerima data dari TambahLariFragment
         parentFragmentManager.setFragmentResultListener("REQ_LARI", viewLifecycleOwner) { _, bundle ->
 
-            // Buka bungkusan data dan jadikan objek RunData
             val hasilLari = bundle.getSerializable("DATA_LARI") as? RunData
 
             if (hasilLari != null) {
-                // Munculkan notifikasi sukses pakai data dari objek! (Target Nilai 85+ tercapai!)
+
+                // ✅ SIMPAN DATA
+                RunRepository.listRun.add(hasilLari)
+
+                // ✅ REFRESH LIST
+                adapter.notifyDataSetChanged()
+
                 Toast.makeText(requireContext(),
-                    "Sukses! Aktivitas dicatat: ${hasilLari.jarak} km pada ${hasilLari.tanggal}",
-                    Toast.LENGTH_LONG).show()
+                    "Sukses! ${hasilLari.jarak} km ditambahkan",
+                    Toast.LENGTH_SHORT).show()
             }
         }
 
-        // 2. Logika tombol Tambah (+) -> Pindah ke TambahLariFragment
+        // 🔥 3. Tombol tambah
         val fabAdd = view.findViewById<FloatingActionButton>(R.id.fabAdd)
         fabAdd.setOnClickListener {
             parentFragmentManager.beginTransaction()
