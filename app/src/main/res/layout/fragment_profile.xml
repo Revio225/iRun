@@ -4,29 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="@color/bg">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/margin_padding_standar">
 
-        <!-- Profile Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="@dimen/margin_padding_standar">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="@dimen/margin_padding_standar">
 
-                <!-- Avatar + Name -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -39,9 +37,9 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:src="@android:drawable/ic_menu_myplaces"
-                        android:background="#F5F5F5"
+                        android:background="@color/bg"
                         android:scaleType="centerCrop"
-                        android:layout_marginEnd="16dp" />
+                        android:layout_marginEnd="@dimen/margin_padding_standar" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -55,7 +53,7 @@
                             android:text="Elvina Meisya"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#ff7c3c" />
+                            android:textColor="@color/primary" />
 
                         <TextView
                             android:id="@+id/tvLocation"
@@ -63,11 +61,10 @@
                             android:layout_height="wrap_content"
                             android:text="Surabaya, Indonesia"
                             android:textSize="14sp"
-                            android:textColor="#757575" />
+                            android:textColor="@color/grey" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Edit & Log Out Buttons -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -78,44 +75,41 @@
                         android:id="@+id/btnEdit"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="@dimen/button_height_elvina"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#FF7c3c"
+                        android:backgroundTint="@color/primary"
                         android:text="Edit"
-                        android:textColor="#FFFFFF" />
-
+                        android:textColor="@color/white" />
 
                     <Button
                         android:id="@+id/btnLogout"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="@dimen/button_height_elvina"
                         android:layout_marginStart="8dp"
                         android:layout_weight="1"
                         android:backgroundTint="@android:color/transparent"
                         android:text="Log Out"
-                        android:textColor="#FF7c3c"
-                        app:strokeColor="#FF7c3c"
+                        android:textColor="@color/primary"
+                        app:strokeColor="@color/primary"
                         app:strokeWidth="1dp" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- This Week Stats Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="@dimen/margin_padding_standar">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp"
-                tools:ignore="ExtraText">
+                android:padding="@dimen/margin_padding_standar">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -126,7 +120,6 @@
                     android:textColor="#212121"
                     android:layout_marginBottom="12dp" />
 
-                <!-- Stats Row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,21 +127,18 @@
                     android:weightSum="3"
                     android:layout_marginBottom="16dp">
 
-                    <!-- Distance -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Distance"
                             android:textSize="12sp"
-                            android:textColor="#757575" />
-
+                            android:textColor="@color/grey" />
                         <TextView
                             android:id="@+id/tvDistance"
                             android:layout_width="wrap_content"
@@ -156,24 +146,21 @@
                             android:text="0 km"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#FF5722" />
+                            android:textColor="@color/primary" />
                     </LinearLayout>
 
-                    <!-- Time -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Time"
                             android:textSize="12sp"
-                            android:textColor="#757575" />
-
+                            android:textColor="@color/grey" />
                         <TextView
                             android:id="@+id/tvTime"
                             android:layout_width="wrap_content"
@@ -181,24 +168,21 @@
                             android:text="0 h"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#FF5722" />
+                            android:textColor="@color/primary" />
                     </LinearLayout>
 
-                    <!-- Elevation Gain -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:gravity="center">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Elevation gain"
+                            android:text="Elevation"
                             android:textSize="12sp"
-                            android:textColor="#757575" />
-
+                            android:textColor="@color/grey" />
                         <TextView
                             android:id="@+id/tvElevation"
                             android:layout_width="wrap_content"
@@ -206,16 +190,14 @@
                             android:text="0 m"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#FF5722" />
+                            android:textColor="@color/primary" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Chart placeholder (MPAndroidChart LineChart) -->
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/lineChart"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    tools:ignore="MissingClass" />
+                    android:layout_height="180dp" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
