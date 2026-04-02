@@ -2,5 +2,4 @@
 <resources>
     <dimen name="tinggi_tombol_elvina">50dp</dimen>
     <dimen name="padding_layar">16dp</dimen>
-</resources><?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+</resources>
