@@ -23,11 +23,13 @@ Aplikasi Android sederhana berbasis **Kotlin** untuk mencatat progres latihan la
 5.  **Profil :** Tampilan biodata pengguna.
 
 ## Jobdesc Clan Member :
-- Naufal - Welcome & Beranda
-- Zaqi - Catat Lari
-- Dwiki - Registrasi
-- Elvina - Profil
+- Naufal - Update Class Data
+- Dwiki - Integrasi tambah lari ke beranda
+- Elvina - Konsistensi UI
+- Zaqi - Navigasi semua halaman
 
+## Referensi :
+- icon : https://id.pinterest.com/slashgrid/
 
 Made by Kelompok 6 - Paralel D
 Pemrograman Mobile
