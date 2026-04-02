@@ -1,42 +1,67 @@
 package com.example.catatlari
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import java.text.SimpleDateFormat
+import java.util.*
 
 class TambahLariFragment : Fragment(R.layout.fragment_tambahlari) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 1. ID sudah disesuaikan persis dengan file XML milikmu
+        // 1. ID tetap sama (tidak diubah)
         val etTanggal = view.findViewById<EditText>(R.id.tanggal)
         val etJarak = view.findViewById<EditText>(R.id.jarak)
         val etWaktu = view.findViewById<EditText>(R.id.waktu)
         val btnSimpan = view.findViewById<Button>(R.id.btnSimpan)
 
-        // 2. Logika tombol Simpan -> Kirim Data & Kembali ke Beranda
+        // 🔥 FORMAT TANGGAL INDONESIA
+        val formatTanggal = SimpleDateFormat("dd MMMM yyyy", Locale("id", "ID"))
+
+        // 🔥 2. SET TANGGAL OTOMATIS (hari ini)
+        etTanggal.setText(formatTanggal.format(Date()))
+
+        // 🔥 3. DATE PICKER (klik EditText tanggal)
+        etTanggal.setOnClickListener {
+            val calendar = Calendar.getInstance()
+
+            val datePicker = DatePickerDialog(
+                requireContext(),
+                { _, year, month, day ->
+                    val cal = Calendar.getInstance()
+                    cal.set(year, month, day)
+                    etTanggal.setText(formatTanggal.format(cal.time))
+                },
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)
+            )
+
+            datePicker.show()
+        }
+
+        // 🔥 OPTIONAL (biar keyboard tidak muncul)
+        etTanggal.isFocusable = false
+
+        // 4. Logika tombol Simpan (TIDAK DIUBAH)
         btnSimpan.setOnClickListener {
             val tgl = etTanggal.text.toString().trim()
             val jrk = etJarak.text.toString().trim()
             val wkt = etWaktu.text.toString().trim()
 
-            // Cek apakah data sudah diisi semua
             if (tgl.isNotEmpty() && jrk.isNotEmpty() && wkt.isNotEmpty()) {
 
-                // Masukkan isian ke dalam Data Class
                 val lariBaru = RunData(tgl, jrk, wkt)
 
-                // Bungkus objek ke dalam Bundle
                 val bundle = Bundle()
                 bundle.putSerializable("DATA_LARI", lariBaru)
 
-                // Kirim hasil kembali ke sistem dengan kunci "REQ_LARI"
                 parentFragmentManager.setFragmentResult("REQ_LARI", bundle)
-
-                // Tutup halaman Tambah Lari (otomatis mundur ke Beranda)
                 parentFragmentManager.popBackStack()
 
             } else {
