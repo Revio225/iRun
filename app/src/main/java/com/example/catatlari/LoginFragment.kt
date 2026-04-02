@@ -29,9 +29,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         // 3. Logika tombol Login -> Pindah ke BerandaFragment
         btnLogin.setOnClickListener {
+            // Kita ganti agar tidak pakai addToBackStack, 
+            // supaya kalau sudah di Beranda tidak bisa balik ke Login lagi pakai tombol Back.
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, BerandaFragment())
-                .addToBackStack(null) // Biar user bisa pakai tombol 'Back' di HP
                 .commit()
         }
     }

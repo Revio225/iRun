@@ -56,16 +56,22 @@ class MainActivity : AppCompatActivity() {
 
         // Navigasi lewat Tombol Tambah (Highlight)
         fabTambahLari.setOnClickListener {
-            replaceFragment(TambahLariFragment())
+            replaceFragment(TambahLariFragment(), addToBackStack = true)
             // Reset selection di bottom nav
             bottomNavigationView.menu.findItem(R.id.nav_placeholder).isChecked = true
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
+    // Fungsi replaceFragment yang bisa diatur apakah mau simpan history (backstack) atau tidak
+    private fun replaceFragment(fragment: Fragment, addToBackStack: Boolean = false) {
+        val transaction = supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
-            .commit()
+        
+        if (addToBackStack) {
+            transaction.addToBackStack(null)
+        }
+        
+        transaction.commit()
     }
 
     private fun setBottomNavigationVisibility(isVisible: Boolean) {
